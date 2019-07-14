@@ -1,0 +1,47 @@
+﻿!UI trail file version 1
+!Application name  `PRO`
+! Message Dialog: Error
+!               : L'espressione è vuota.
+~ Activate `UI Message Dialog` `ok`
+~ LButtonArm `main_dlg_cur` `proe_win` 9 470 370 0 1 1121 613 1536 864 585244
+~ LButtonDisarm `main_dlg_cur` `proe_win` 9 470 370 0 0 1121 613 1536 864 585354
+@ sel view 0
+ -0.595076 -1.796685 -0.092312 0.121375 -0.137104 1.886050
+ -1.794956 0.586378 0.158139 532.796603 448.816332 -1789.078835 3.578682 0.000000 0
+~ Activate `pm_measure_dlg` `apply`
+! Message Dialog: Error
+!               : L'espressione è vuota.
+~ Activate `UI Message Dialog` `ok`
+~ Close `pm_measure_dlg` `pm_measure_dlg`
+~ Activate `pmmeasure` `new_measure`
+!%CPSelezionare un punto o asse moto
+~ Open `pm_measure_dlg` `measure_type`
+~ Close `pm_measure_dlg` `measure_type`
+~ Select `pm_measure_dlg` `measure_type` 1 `velocity`
+!%CPSelezionare un punto o asse moto
+~ LButtonArm `main_dlg_cur` `proe_win` 9 467 364 0 1 1121 613 1536 864 606395
+~ LButtonDisarm `main_dlg_cur` `proe_win` 9 467 364 0 0 1121 613 1536 864 606567
+@ sel view 0
+ -0.595076 -1.796685 -0.092312 0.121375 -0.137104 1.886050
+ -1.794956 0.586378 0.158139 532.796603 448.816332 -1789.078835 3.578682 0.000000 0
+@ stack idx 0
+@SELECTION 1 1 61 55 381 -1 0.0000000000 0.0000000000 4.8471600722 7.1110289112 1.0000000000
+!Vertice:Spigolo:F2(NEUTRO):MDM_B8
+~ Activate `pm_measure_dlg` `apply`
+~ Activate `pm_measure_dlg` `ok`
+~ Activate `pmmeasure` `Plot`
+~ Close `graph_wnd` `graph_wnd`
+~ Activate `pmmeasure` `close_btn`
+~ Command `ProCmdUtilAppAsmExit` 
+~ Activate `pmsaveresults` `save_exit_btn`
+!%CIAnalysisDefinition2 salvato.
+~ Trail `UI Desktop` `UI Desktop` `PREVIEW_POPUP_TIMER` \
+ `main_dlg_w1:PHTLeft.AssyTree:<NULL>`
+~ Close `main_dlg_cur` `main_dlg_cur`
+!Command ProCmdOSExit was pushed from the software.
+! Message Dialog: Warning
+!               : Creo Parametric Student Edition (for educational use only) verrà chiuso e il lavoro non salvato verrà perduto.
+!               : Uscire?
+~ FocusIn `UI Message Dialog` `yes`
+~ Activate `UI Message Dialog` `yes`
+!End of Trail File
